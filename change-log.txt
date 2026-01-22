@@ -1,4 +1,4 @@
-= 1.2.31 - 2026-01-TBD =
+= 1.2.31 - 2026-01-22 =
 * Border radius can't be unset when border is set to default - FIXED
 
 = 1.2.30 - 2025-11-13 =
