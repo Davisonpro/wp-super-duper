@@ -108,8 +108,7 @@ trait GutenbergBlock {
         $arguments = $this->get_arguments();
         $arguments = self::parse_block_components( $arguments );
 
-		// Both were package-wide defaults before 3.0, and a block that never asked for them
-		// should not gain them on upgrade.
+		// Package-wide defaults before 3.0; a block that never asked should not gain them.
 		$supports = isset( $this->options['block-supports'] ) ? $this->options['block-supports'] : array();
 		if ( ! isset( $supports['renaming'] ) ) {
 			$supports['renaming'] = false;

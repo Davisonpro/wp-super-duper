@@ -1898,11 +1898,8 @@ class Utils {
 			return '';
 		}
 
-		// A full "[tag a='1']" string carries attributes of its own. A block saved before
-		// those attributes moved onto the block itself has them here and nowhere else, so
-		// they stand as the defaults and anything in $args wins over them. Without this the
-		// slug is taken and the rest of the stored string is thrown away, and every such
-		// block silently loses its settings.
+		// A block saved before the attributes moved onto the block has them in this string
+		// and nowhere else, so they are the defaults and $args wins over them.
 		$stored = self::get_shortcode_atts( $name );
 
 		$name       = self::get_shortcode_slug( $name );
